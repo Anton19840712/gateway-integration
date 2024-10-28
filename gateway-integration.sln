@@ -3,9 +3,52 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sse", "sse", "{CC8B3AFE-33CD-4353-8BCA-28275CF7B63C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ftp", "ftp", "{FDD5EEEC-73C7-433C-A58B-C99242DD3FA9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "http", "http", "{D5EF11CF-9065-4DDB-9283-1588786855FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "brokers", "brokers", "{80E3F069-1F23-46C7-B661-DBBCF69DB195}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "kafka", "kafka", "{37DCA54A-B18C-40E9-83F0-2AD86C302D99}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "rabbit", "rabbit", "{EED9CC28-5D55-4275-AFB1-E33878661515}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "long-polling", "long-polling", "{0BF9B634-C632-4029-ABBF-A437C2B5BB29}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "short-polling", "short-polling", "{54662D9A-555F-4410-90DA-15B38DE0597D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sftp", "sftp", "{AE69E3C1-7458-4EC5-B661-6AE90582484A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tcp", "tcp", "{7F580115-7384-4F69-AAE8-765E171DBF09}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "webhook", "webhook", "{ADED0B4D-F474-4A1E-AE09-29F6C02702C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "websocket", "websocket", "{FFB7A8B3-8AB6-4729-9AA7-03846B2E18B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "udp", "udp", "{571C75AA-0C37-48B3-A8DE-5E90A1F53866}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kafka-client", "kafka-client\kafka-client.csproj", "{21221A60-8A39-4671-B5D4-16F1F0AB723B}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21221A60-8A39-4671-B5D4-16F1F0AB723B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21221A60-8A39-4671-B5D4-16F1F0AB723B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21221A60-8A39-4671-B5D4-16F1F0AB723B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21221A60-8A39-4671-B5D4-16F1F0AB723B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{37DCA54A-B18C-40E9-83F0-2AD86C302D99} = {80E3F069-1F23-46C7-B661-DBBCF69DB195}
+		{EED9CC28-5D55-4275-AFB1-E33878661515} = {80E3F069-1F23-46C7-B661-DBBCF69DB195}
+		{21221A60-8A39-4671-B5D4-16F1F0AB723B} = {37DCA54A-B18C-40E9-83F0-2AD86C302D99}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4ED60FCA-4C88-44F5-8133-3A0E05EB2910}
