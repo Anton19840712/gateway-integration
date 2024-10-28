@@ -29,7 +29,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "websocket", "websocket", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "udp", "udp", "{571C75AA-0C37-48B3-A8DE-5E90A1F53866}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kafka-client", "kafka-client\kafka-client.csproj", "{21221A60-8A39-4671-B5D4-16F1F0AB723B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kafka-client", "brokers\kafka\kafka-client\kafka-client.csproj", "{21221A60-8A39-4671-B5D4-16F1F0AB723B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
