@@ -1,0 +1,85 @@
+﻿<div class="text-center">
+    <h1>WebSocket Client</h1>
+    <p>Этот клиент позволяет установить WebSocket-соединение с сервером и отправлять сообщения.</p>
+
+    <h2>Connection</h2>
+    <p>
+        <button id="toggleButton" onclick="toggleConnection();">Open Connection</button>
+    </p>
+
+    <h2>Send Message</h2>
+    <p>
+        <input id="wbinput" type="text" placeholder="Введите сообщение" />
+        <button onclick="send();">Send</button>
+    </p>
+
+    <h2>Response</h2>
+    <p id="answerbox">Received: </p>
+    <p id="errorbox" style="color: red;"></p>
+
+    <script>
+        var testsocket = null;
+
+        function updateButtonText() {
+            const button = document.getElementById("toggleButton");
+            button.innerHTML = testsocket && testsocket.readyState === WebSocket.OPEN ? "Close Connection" : "Open Connection";
+        }
+
+        function toggleConnection() {
+            if (testsocket === null || testsocket.readyState === WebSocket.CLOSED) {
+                openConnection();
+            } else if (testsocket.readyState === WebSocket.OPEN) {
+                closeConnection();
+            }
+            updateButtonText();
+        }
+
+        function openConnection() {
+            testsocket = new WebSocket("ws://localhost:5048/ws"); // Убедитесь, что порт правильный
+
+            testsocket.onopen = function () {
+                updateButtonText(); // Обновляем текст кнопки при открытии
+                document.getElementById("errorbox").innerHTML = ""; // Очищаем ошибки
+                console.log("WebSocket connection opened");
+            }
+
+            testsocket.onclose = function () {
+                updateButtonText(); // Обновляем текст кнопки при закрытии
+                document.getElementById("errorbox").innerHTML = ""; // Очищаем ошибки
+                console.log("WebSocket connection closed");
+            }
+
+            testsocket.onerror = function (e) {
+                console.error("Error: " + e.message);
+            }
+
+            testsocket.onmessage = function (e) {
+                document.getElementById("answerbox").innerHTML = "Received: " + e.data;
+            }
+        }
+
+        function closeConnection() {
+            if (testsocket !== null && testsocket.readyState === WebSocket.OPEN) {
+                testsocket.close();
+                console.log("Closing WebSocket connection...");
+            }
+        }
+
+        function send() {
+            const message = document.getElementById("wbinput").value.trim(); // Убираем пробелы
+
+            if (testsocket !== null && testsocket.readyState === WebSocket.OPEN) {
+                if (message === "") {
+                    document.getElementById("errorbox").innerHTML = "Cannot send an empty message!";
+                    console.warn("Cannot send an empty message!");
+                } else {
+                    testsocket.send(message);
+                    document.getElementById("errorbox").innerHTML = ""; // Очищаем ошибки
+                }
+            } else {
+                document.getElementById("errorbox").innerHTML = "WebSocket connection is closed! Cannot send message.";
+                console.warn("WebSocket connection is not open!");
+            }
+        }
+    </script>
+</div>
