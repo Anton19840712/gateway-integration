@@ -62,6 +62,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webhook-trigger-server", "w
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "websocket-client-and-server-web", "websocket\websocket-client-and-server-web\websocket-client-and-server-web.csproj", "{72B18D7B-0009-472D-9C75-074AEE37BBDF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sse-client", "sse\sse-client\sse-client.csproj", "{B54907E3-68AF-496F-A0A7-D8C6B5109967}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -128,6 +130,10 @@ Global
 		{72B18D7B-0009-472D-9C75-074AEE37BBDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72B18D7B-0009-472D-9C75-074AEE37BBDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72B18D7B-0009-472D-9C75-074AEE37BBDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B54907E3-68AF-496F-A0A7-D8C6B5109967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B54907E3-68AF-496F-A0A7-D8C6B5109967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B54907E3-68AF-496F-A0A7-D8C6B5109967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B54907E3-68AF-496F-A0A7-D8C6B5109967}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -150,6 +156,7 @@ Global
 		{03569335-3285-4C72-8938-82385EFF99CB} = {ADED0B4D-F474-4A1E-AE09-29F6C02702C3}
 		{BB1DB256-3E40-4CAC-879F-2E7FF634A5CD} = {ADED0B4D-F474-4A1E-AE09-29F6C02702C3}
 		{72B18D7B-0009-472D-9C75-074AEE37BBDF} = {FFB7A8B3-8AB6-4729-9AA7-03846B2E18B0}
+		{B54907E3-68AF-496F-A0A7-D8C6B5109967} = {CC8B3AFE-33CD-4353-8BCA-28275CF7B63C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4ED60FCA-4C88-44F5-8133-3A0E05EB2910}
